@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    position: relative;
+    background-image: url(./img/Sandwich.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: brown;
+    padding: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    position: relative;
+}
+
+header img {
+    height: 45px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    color: rgb(188, 34, 34);
+}
+
+/* Food Item Styles */
+.food {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(16, 5, 5, 0.551);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-item {
+    transition: 0.3s;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(238, 130, 130, 0.76);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-item:hover {
+    transform: scale(1.1);
+}
+
+/* Flexbox Layouts */
+.flex, .flex1, .flex2 {
+    display: flex;
+}
+
+/* Footer Styles */
+footer {
+    color: white;
+    text-align: center;
+    background-color: brown;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.foot ul {
+    list-style: none;
+    padding: 0;
+}
+
+.foot-2 {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.foot-2 i {
+    margin-right: 20px;
+}
+
+/* Navigation Icons */
+.navIcons {
+    margin: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navIcons i {
+    padding: 20px;
+    color: white;
+}
+
+.navIcons i:hover {
+    color: rgb(255, 254, 254);
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Court</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/food.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navIcons">
+            <nav>
+                <ul>         
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" height="20px">      
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('food') }}">Food Court</a></li>
+                    <li><a href="./movies.html">Movies</a></li>
+                    <li><a href="./booking.html">Bookings</a></li>
+                    <li><a href="./movies.html">About</a></li>
+                    <li><a href="./movies.html">Log in</a></li>
+                </ul>
+            </nav>
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+    </header>
+    <h1>Strictly NOT allowed outside foods</h1>  
+    <main>    
+        <div class="food">
+            <div class="flex">
+                <div class="puff">
+                    <p class="snack">VEG PUFF</p>
+                    <img src="{{ url_for('static', filename='img/puffs.jpeg') }}" alt="Puffs Image">
+                    <h3>RS.30 ⭐⭐⭐⭐⭐(1,992)</h3>
+                    <p>Golden, flaky pastry filled with a rich, savory chicken filling. Each bite bursts with the flavors of tender chicken, aromatic spices, and a hint of creamy sauce. Perfect for a quick, satisfying snack.</p>
+                </div>
+                <div class="shawarma">
+                    <p class="snack">SHAWARMA</p>
+                    <img src="{{ url_for('static', filename='img/shawarma.jpeg') }}">
+                    <h3>RS.80 ⭐⭐⭐⭐(986)</h3>
+                    <p>Indulge in our Classic Chicken Shawarma, where tender marinated chicken is grilled to perfection and thinly sliced. Wrapped in warm pita bread and layered with crisp lettuce, juicy tomatoes, and a tangy garlic sauce, this shawarma offers an explosion of flavors with every bite.</p>
+                </div>
+            </div>
+            <div class="flex1">
+                <div class="momo">
+                    <p class="snack">CHEESE MOMO</p>
+                    <img src="{{ url_for('static', filename='img/momos.jpeg') }}">
+                    <h3>RS.750 ⭐⭐⭐⭐(764)</h3>
+                    <p>Special varieties include cheese Momos that ooze melted cheese with every bite and sweet Momos filled with chocolate or fruit preserves for dessert.</p>
+                </div>
+                <div class="pop">
+                    <p class="snack">POP CORN</p>
+                    <img src="{{ url_for('static', filename='img/popcorn.jpeg') }}">
+                    <h3>RS.50 ⭐⭐⭐⭐⭐(1,486)</h3>
+                    <p>Bright orange popcorn pieces dusted with a sharp and tangy cheddar cheese powder. The cheese clings to each kernel, offering a burst of flavor with every bite. This savory treat is a favorite among cheese lovers, providing a satisfying crunch and a burst of umami.</p>
+                </div>
+            </div>
+            <div class="flex2">
+                <div class="nug">
+                    <p class="snack">NUGGETS</p>
+                    <img src="{{ url_for('static', filename='img/nuggets.jpeg') }}">
+                    <h3>RS.120 ⭐⭐⭐⭐⭐(1,002)</h3>
+                    <p>Juicy chicken nuggets with a kick! These nuggets are seasoned with a blend of spices to give them a zesty, slightly spicy flavor. Coated in a crunchy breading that complements the heat.</p>
+                </div>
+                <div class="burger">
+                    <p class="snack">BURGER</p>
+                    <img src="{{ url_for('static', filename='img/burger1.jpeg') }}">
+                    <h3>RS.200 ⭐⭐⭐⭐(872)</h3>
+                    <p>"Juicy, big, loaded with toppings of my choice." "High quality beef medium to well with cheese and bacon on a multigrain bun."</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foot">
+            <ul>
+                <li>What is Fandom?</li>
+                <li>About</li>
+                <li>Careers</li>
+                <li>Press</li>
+                <li>Contact</li>
+            </ul>
+            <ul>
+                <li>Community Central</li>
+                <li>Support</li>
+                <li>Help</li>
+                <li>Media Kit</li>
+                <li>Contact</li>
+            </ul>
+            <ul>
+                <li>Terms of Use</li>
+                <li>Privacy Policy</li>
+                <li>Digital Services Act</li>
+                <li>Global Sitemap</li>
+                <li>Local Sitemap</li>
+            </ul>
+        </div>
+        <div class="foot-2">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+    </footer>
+</body>
+</html>
