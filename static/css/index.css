@@ -1,0 +1,203 @@
+/* Global Styles */
+body {
+    position: relative;
+    background-image: url(./img/theater1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: brown;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: large;
+    position: relative;
+}
+
+header img {
+    height: 45px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.navIcons {
+    margin: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navIcons i {
+    padding: 20px;
+}
+
+.navIcons i:hover {
+    color: rgb(255, 254, 254);
+}
+
+/* Marquee Styles */
+.marquee-box {
+    padding-top: 5%;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.marquee-box img {
+    display: inline-block;
+    animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Footer Styles */
+footer {
+    color: white;
+    text-align: center;
+    background-color: brown;
+    padding: 20px 0;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.foot ul {
+    list-style: none;
+    padding: 0;
+}
+
+.foot-2 {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.foot-2 i {
+    margin: 0 15px;
+}
+
+/* Layout and Content Styles */
+.row, .row1, .row2 {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column, .column1, .column2 {
+    flex: 1;
+    padding: 0;
+}
+
+h2 {
+    color: rgb(227, 220, 220);
+}
+
+/* Table Styles */
+.table {
+    margin: 20px auto;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Form Styles */
+form {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form select, form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: darkred;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navIcons {
+        margin: 0;
+    }
+
+    .navIcons i {
+        padding: 15px;
+    }
+
+    .foot {
+        flex-direction: column;
+    }
+
+    .foot-2 {
+        font-size: 18px;
+    }
+
+    .row, .row1, .row2 {
+        flex-direction: column;
+        margin: 20px;
+    }
+}
