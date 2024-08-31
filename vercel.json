@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "version": 2,
     "builds": [
@@ -14,21 +13,4 @@
             "dest": "/"
         }
     ]
-=======
-{
-    "version": 2,
-    "builds": [
-    {
-        "src": "./index.py", 
-        "use": "@vercel/python",
-        "config": {"runtime": "python3.6"}
-    }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
-    ]
->>>>>>> 3d02e281e468f752c30031f112be94d8158e7202
 }
