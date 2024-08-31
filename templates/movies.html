@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,3 +124,130 @@
     </footer>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navIcons">
+            <nav>
+                <ul>         
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" height="20px">      
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('food') }}">Food Court</a></li>
+                    <li><a href="./booking.html">Bookings</a></li>
+                    <li><a href="{{ url_for('movies') }}">About</a></li>
+                    <li><a href="./movies.html">Log in</a></li>
+                </ul>
+            </nav>
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </div>
+    </header>
+    <main>
+        <div class="heading"><h1>MOVIES</h1></div>
+        <div class="main2">
+            <div class="card">
+                <a href="https://youtu.be/p64Pxn_Mjn0?si=C2pSTiqY83Q7a5qz">
+                    <img src="{{ url_for('static', filename='img/Abhiyum_Naanum.jpg') }}" class="card-img-top"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Abhiyum_Naanum</h5>
+                    <p class="card-text">Ilamukhil gets jealous when his family driver's daughter, Abhirami gets more attention from his mother. However, he is unaware that Abhirami just wants to befriend him.</p>
+                    <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/7-AfFeIgGb8?si=0sRVnVpJhduYez2s">
+                    <img src="{{ url_for('static', filename='img/unale.jpeg') }}" class="card-img-top"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Unnale Unnale</h5>
+                    <p class="card-text">Karthik meets Deepika during a flight to Melbourne and they become friends. On reaching Australia, Karthik realises that Deepika works in the same firm as his ex-lover Jhansi.</p>
+                    <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/XG8PWUgAIiM?si=pzZqEf1KE37rs9WL">
+                    <img src="{{ url_for('static', filename='img/ni dhane en ponvasan.jpg') }}" class="card-img-top"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Neethane en ponvasandham</h5>
+                    <p class="card-text">Childhood friends Varun and Nithya are in love with each other but due to different career choices, they break up with each other. Years later, Varun meets her and tries his best to win her back.</p>
+                    <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="card">
+                <a href="https://youtu.be/EmqDR8FOYxk?si=OBxfgQIRivk3TpoR">
+                    <img src="{{ url_for('static', filename='img/sachin.jpeg') }}" class="card-img-top"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Sachin</h5>
+                    <p class="card-text">Sachein and Shalini, who study in the same college, become close friends after he saves her injured father during an accident. However, their ego does not allow them to disclose their feelings.</p>
+                    <a href="#" class="btn btn-primary">Coming soon...</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/1tojZIuSt4E?si=jeF4xiGaPZ1Z-ipp">
+                    <img src="{{ url_for('static', filename='img/minnale.jpeg') }}" class="card-img-top"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Minnale</h5>
+                    <p class="card-text">A man falls in love with a woman and cons his way into her heart through lies. When she finds out and confronts him, he has no sign of remorse as he feels that everything is fair in love and war.</p>
+                    <a href="#" class="btn btn-primary">Coming soon...</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://youtu.be/BRFdGc3ku-k?si=zPfI71R3YLbTNto4">
+                    <img src="{{ url_for('static', filename='img/alaipauthey.jpeg') }}" class="card-img-top"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Alaipauthey</h5>
+                    <p class="card-text">Karthik and Shakti marry against the wishes of their families and start their new life. However, they soon realise that marriage is not the bed of roses they had imagined it would be.</p>
+                    <a href="#" class="btn btn-primary">Coming soon...</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foot">
+            <ul>
+                <li>What is Fandom?</li>
+                <li>About</li>
+                <li>Careers</li>
+                <li>Press</li>
+                <li>Contact</li>
+            </ul>
+            <ul>
+                <li>Community Central</li>
+                <li>Support</li>
+                <li>Help</li>
+                <li>Media Kit</li>
+                <li>Contact</li>
+            </ul>
+            <ul>
+                <li>Terms of Use</li>
+                <li>Privacy Policy</li>
+                <li>Digital Services Act</li>
+                <li>Global Sitemap</li>
+                <li>Local Sitemap</li>
+            </ul>
+        </div>
+        <div class="foot-2">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+    </footer>
+</body>
+</html>
+>>>>>>> 3d02e281e468f752c30031f112be94d8158e7202
