@@ -16,6 +16,8 @@ IT OPENS THE LOCAL DEPLOYMENT SITE...
 
 THAT'S DONE...EXPLORE THE *CODE DOT CINEMA*...
 
+DEPLOYED PROJECT:
+https://movie-booking-system-codedot.onrender.com/
 
 GITHUB REPO: 
 https://github.com/OnlyCR7/movie_booking_system-codedot.git
