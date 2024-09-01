@@ -23,6 +23,6 @@ GITHUB REPO:
 https://github.com/OnlyCR7/movie_booking_system-codedot.git
 
 COLLABORATORS:
-1. OnlyCR7
-2. YashKerkar0135
-3. Swayam29082004
+1. OnlyCR7 : https://github.com/OnlyCR7
+2. YashKerkar0135 : https://github.com/YashKerkar0135
+3. Swayam29082004 : https://github.com/Swayam29082004
