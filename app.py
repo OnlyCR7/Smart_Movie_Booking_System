@@ -60,7 +60,7 @@ def get_recommendations(favorite_movie):
 
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 @app.route('/food')
@@ -82,10 +82,7 @@ def recommend_movie():
         recommended_movies = get_recommendations(favorite_movie)
         return jsonify(recommended_movies=recommended_movies)
     return render_template('recommend_movie.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html')  # Make sure this file exists in templates
+ # Make sure this file exists in templates
 
 @app.route('/login')
 def login():

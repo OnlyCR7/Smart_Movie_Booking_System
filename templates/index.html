@@ -6,128 +6,157 @@
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     <header>
-        <div class="navIcons">
-            <nav>
-                <ul>
-                    <li><img src="{{ url_for('static', filename='img/logo.png') }}" height="20px" alt="Logo"></li>
-                    <li><a href="{{ url_for('movies') }}">Movies</a></li>
-                    <li><a href="{{ url_for('booking') }}">Bookings</a></li>
-                    <li><a href="{{ url_for('food') }}">Food Court</a></li>
-                    <li><a href="{{ url_for('recommend_movie') }}">Recomend Movie</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                    <li><a href="{{ url_for('login') }}">Log in</a></li>
-                </ul>
-            </nav>
-            <div class="icon-group">
-                <i class="fa-sharp fa-solid fa-magnifying-glass" aria-label="Search"></i>
-                <i class="fa-regular fa-user" aria-label="User"></i>
-                <i class="fa-sharp fa-solid fa-cart-shopping" aria-label="Cart"></i>
-            </div>
+        <img src="{{ url_for('static', filename='/img/codedot_logo.gif') }}" alt="Logo" class="logo">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="{{ url_for('movies') }}">Movies</a></li>
+                <li><a href="{{ url_for('booking') }}">Bookings</a></li>
+                <li><a href="{{ url_for('recommend_movie') }}">Recommend Movie</a></li>
+                <li><a href="{{ url_for('food') }}">Food Court</a></li>
+                <li><a href="{{ url_for('login') }}">Log in</a></li>
+            </ul>
+        </nav>
+        <div class="icon-group">
+            <i class="fa-sharp fa-solid fa-magnifying-glass" aria-label="Search"></i>
+            <i class="fa-regular fa-user" aria-label="User"></i>
+            <i class="fa-sharp fa-solid fa-cart-shopping" aria-label="Cart"></i>
         </div>
     </header>
+
     <main>
         <div class="marquee-box">
             <div class="marquee-content">
-                <img src="{{ url_for('static', filename='img/Abhiyum_Naanum.jpg') }}" width="387px" alt="Abhiyum Naanum">
-                <img src="{{ url_for('static', filename='img/ni_dhane_en_ponvasan.jpg') }}" width="200px" alt="Ni Dhane En Ponvasan">
-                <img src="{{ url_for('static', filename='img/unale.jpeg') }}" height="260px" width="200px" alt="Unale">
-                <img src="{{ url_for('static', filename='img/okok_movies.jpeg') }}" alt="OKOK Movies">
-                <img src="{{ url_for('static', filename='img/sachin.jpeg') }}" height="260px" alt="Sachin">
-                <img src="{{ url_for('static', filename='img/alaipauthey.jpeg') }}" height="260px" alt="Alaipayuthey">
-                <img src="{{ url_for('static', filename='img/minnale.jpeg') }}" height="260px" alt="Minnale">
-                <img src="{{ url_for('static', filename='img/vaarnam_ayram.jpeg') }}" height="260px" alt="Vaarnam Aayiram">
+                <img src="{{ url_for('static', filename='img/Abhiyum_Naanum.jpg') }}" alt="Abhiyum Naanum">
+                <img src="{{ url_for('static', filename='img/unale.jpeg') }}" alt="Unale">
+                <img src="{{ url_for('static', filename='img/tanhaji.jpeg') }}" alt="Abhiyum Naanum">
+                <img src="{{ url_for('static', filename='img/sachin.jpeg') }}" alt="Sachin">
+                <img src="{{ url_for('static', filename='img/raees.jpeg') }}" alt="Sachin">
+                <img src="{{ url_for('static', filename='img/ant_man.jpeg') }}" alt="Sachin">
+                <img src="{{ url_for('static', filename='img/vijay_master.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/marvel.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/alaipauthey.jpeg') }}" alt="Alaipayuthey">
+                <img src="{{ url_for('static', filename='img/war.jpeg') }}" alt="Alaipayuthey">
+                <img src="{{ url_for('static', filename='img/thor.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/minnale.jpeg') }}" alt="Minnale">
+                <img src="{{ url_for('static', filename='img/silent.jpeg') }}" alt="Vaarnam Aayiram">
+                <img src="{{ url_for('static', filename='img/wakanda.jpeg') }}" alt="Vaarnam Aayiram">
+                <img src="{{ url_for('static', filename='img/rrr.jpeg') }}" alt="Vaarnam Aayiram">
                 <img src="{{ url_for('static', filename='img/engeyum_kadhal.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/vaarnam_ayram.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/rrr_ram.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/smart.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/mummay.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/league.jpeg') }}" alt="Engeyum Kadhal">
+                <img src="{{ url_for('static', filename='img/yodha.jpeg') }}" alt="Engeyum Kadhal">
             </div>
         </div>
-        <img src="{{ url_for('static', filename='img/ads.avif') }}" width="100%" alt="Advertisement">
-        <h2>PRIMIERE</h2>
-        <div class="row">
-            <div class="column">
-                <img src="{{ url_for('static', filename='img/eng1.avif') }}" height="300px" alt="Eng1">
+
+        <img src="{{ url_for('static', filename='img/ads.avif') }}" alt="Endless Entertainment Anytime" class="full-width-img">
+
+        <section>
+            <h2 class="primiere-heading">OUR PRIMIERE</h2>
+            <div class="row">
+                <div class="column"><img src="{{ url_for('static', filename='img/eng1.avif') }}" alt="Eng1"></div>
+                <div class="column"><img src="{{ url_for('static', filename='img/eng2.avif') }}" alt="Eng2"></div>
+                <div class="column"><img src="{{ url_for('static', filename='img/eng3.avif') }}" alt="Eng3"></div>
+                <div class="column"><img src="{{ url_for('static', filename='img/eng4.avif') }}" alt="Eng4"></div>
+                <div class="column"><img src="{{ url_for('static', filename='img/eng5.avif') }}" alt="Eng5"></div>
             </div>
-            <div class="column">
-                <img src="{{ url_for('static', filename='img/eng2.avif') }}" height="300px" alt="Eng2">
+        </section>
+
+        <section>
+            <h2 class="primiere-heading">RECOMMENDED MOVIES</h2>
+            <div class="row1">
+                <div class="column1"><img src="{{ url_for('static', filename='img/recom1.avif') }}" alt="Recom1"></div>
+                <div class="column1"><img src="{{ url_for('static', filename='img/recom2.avif') }}" alt="Recom2"></div>
+                <div class="column1"><img src="{{ url_for('static', filename='img/recom3.avif') }}" alt="Recom3"></div>
+                <div class="column1"><img src="{{ url_for('static', filename='img/recom4.avif') }}" alt="Recom4"></div>
+                <div class="column1"><img src="{{ url_for('static', filename='img/recom5.avif') }}" alt="Recom5"></div>
             </div>
-            <div class="column">
-                <img src="{{ url_for('static', filename='img/eng3.avif') }}" height="300px" alt="Eng3">
+        </section>
+
+        <section>
+            <h2 class="primiere-heading">HINDI MOVIES</h2>
+            <div class="row1">
+                <div class="column1"><img src="{{ url_for('static', filename='img/rrr.jpeg') }}" alt="Recom1"></div>
+                <div class="column1"><img src="{{ url_for('static', filename='img/kahani.jpeg') }}" alt="Recom2"></div>
+                <div class="column1"><img src="{{ url_for('static', filename='img/war.jpeg') }}" alt="Recom3"></div>
+                <div class="column1"><img src="{{ url_for('static', filename='img/bool.jpeg') }}" alt="Recom4"></div>
+                <div class="column1"><img src="{{ url_for('static', filename='img/rrr_ram.jpeg') }}" alt="Recom5"></div>
             </div>
-            <div class="column">
-                <img src="{{ url_for('static', filename='img/eng4.avif') }}" height="300px" alt="Eng4">
+        </section>
+        
+        <section>
+            <h2 class="primiere-heading">MALAYALAM  MOVIES</h2>
+
+            <div class="row2">
+                <div class="column2"><img src="{{ url_for('static', filename='img/mal1.avif') }}" alt="Mal1"></div>
+                <div class="column2"><img src="{{ url_for('static', filename='img/mal2.avif') }}" alt="Mal2"></div>
+                <div class="column2"><img src="{{ url_for('static', filename='img/mal3.avif') }}" alt="Mal3"></div>
+                <div class="column2"><img src="{{ url_for('static', filename='img/mal4.avif') }}" alt="Mal4"></div>
+                <div class="column2"><img src="{{ url_for('static', filename='img/mal5.avif') }}" alt="Mal5"></div>
             </div>
-            <div class="column">
-                <img src="{{ url_for('static', filename='img/eng5.avif') }}" height="300px" alt="Eng5">
+        </section>
+
+        <section>
+            <h2 class="primiere-heading">ENGLISH  MOVIES</h2>
+
+            <div class="row2">
+                <div class="column2"><img src="{{ url_for('static', filename='img/avengers.jpeg') }}" alt="Mal1"></div>
+                <div class="column2"><img src="{{ url_for('static', filename='img/horr_train.jpeg') }}" alt="Mal2"></div>
+                <div class="column2"><img src="{{ url_for('static', filename='img/league.jpeg') }}" alt="Mal3"></div>
+                <div class="column2"><img src="{{ url_for('static', filename='img/wakanda.jpeg') }}" alt="Mal4"></div>
+                <div class="column2"><img src="{{ url_for('static', filename='img/silent.jpeg') }}" alt="Mal5"></div>
             </div>
-        </div>
-        <h2>RECOMMENDED MOVIES</h2>
-        <div class="row1">
-            <div class="column1">
-                <img src="{{ url_for('static', filename='img/recom1.avif') }}" height="300px" alt="Recom1">
-            </div>
-            <div class="column1">
-                <img src="{{ url_for('static', filename='img/recom2.avif') }}" height="300px" alt="Recom2">
-            </div>
-            <div class="column1">
-                <img src="{{ url_for('static', filename='img/recom3.avif') }}" height="300px" alt="Recom3">
-            </div>
-            <div class="column1">
-                <img src="{{ url_for('static', filename='img/recom4.avif') }}" height="300px" alt="Recom4">
-            </div>
-            <div class="column1">
-                <img src="{{ url_for('static', filename='img/recom5.avif') }}" height="300px" alt="Recom5">
-            </div>
-        </div>
-        <h2>MALAYALAM</h2>
-        <div class="row2">
-            <div class="column2">
-                <img src="{{ url_for('static', filename='img/mal1.avif') }}" height="300px" alt="Mal1">
-            </div>
-            <div class="column2">
-                <img src="{{ url_for('static', filename='img/mal2.avif') }}" height="300px" alt="Mal2">
-            </div>
-            <div class="column2">
-                <img src="{{ url_for('static', filename='img/mal3.avif') }}" height="300px" alt="Mal3">
-            </div>
-            <div class="column2">
-                <img src="{{ url_for('static', filename='img/mal4.avif') }}" height="300px" alt="Mal4">
-            </div>
-            <div class="column2">
-                <img src="{{ url_for('static', filename='img/mal5.avif') }}" height="300px" alt="Mal5">
-            </div>
-        </div>
+        </section>
+
     </main>
-    <footer>
-        <div class="foot">
-            <ul>
-                <li><a href="#">What is Fandom?</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Press</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Community Central</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Media Kit</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Digital Services Act</a></li>
-                <li><a href="#">Global Sitemap</a></li>
-                <li><a href="#">Local Sitemap</a></li>
-            </ul>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <h3 class="footer__title">Our Services</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Support</a></li>
+                    <li><a href="#" class="footer__link">Donate</a></li>
+                    <li><a href="#" class="footer__link">Report a bug</a></li>
+                    <li><a href="#" class="footer__link">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Our Company</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Blog</a></li>
+                    <li><a href="#" class="footer__link">Our mission</a></li>
+                    <li><a href="#" class="footer__link">Get in touch</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Community</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Support</a></li>
+                    <li><a href="#" class="footer__link">Questions</a></li>
+                    <li><a href="#" class="footer__link">Usage help</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <a href="#" class="footer__social-link"><i class="bx bxl-facebook-circle"></i></a>
+                <a href="#" class="footer__social-link"><i class="bx bxl-github"></i></a>
+                <a href="#" class="footer__social-link"><i class="bx bxl-instagram"></i></a>
+            </div>
         </div>
-        <div class="foot-2">
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
-        </div>
+
+        <p class="footer__copy">&#169; by Code dot, All rights reserved.</p>
     </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

@@ -1,407 +1,541 @@
-<<<<<<< HEAD
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
 /* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    position: relative;
-    background-image: url(./img/theater1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    font-family: Arial, sans-serif;
+  background-image: url(./img/theater1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Lato', sans-serif; /* Updated to Lato */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+  padding: 0;
 }
 
 /* Header Styles */
 header {
-    background-color: brown;
-    padding: 10px;
-    text-align: center;
-    color: #000;
-    font-size: large;
+  background-color: #4A2E3C;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #F3E8E3;
+  width: 100%;
+  position: fixed; /* Fix the header to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box; /* Include padding in width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header .logo {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the logo rounded */
+  border: 2px solid #fff; /* Optional: Add a border for better visibility */
+  padding: 5px; /* Add padding inside the border */
+  margin-right: 20px; /* Space from adjacent elements */
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+header .logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: #F3E8E3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-ul img {
-    position: absolute;
-    height: 45px;
-    top: 8px;
-    left: 16px;
+nav ul li a:hover {
+  background-color: #6E465E;
 }
 
-.navIcons {
-    margin: 0 20px;
-    display: flex;
-    justify-content: flex-end;
+.icon-group {
+  display: flex;
+  gap: 15px;
 }
 
-.navIcons i {
-    padding: 20px;
-    color: white;
+.icon-group i {
+  font-size: 1.5rem;
+  color: #F3E8E3;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.navIcons i:hover {
-    color: rgb(255, 255, 255);
+.icon-group i:hover {
+  color: #C7A6B1;
 }
 
 /* Main Content Styles */
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(224, 222, 222, 0.55);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(224, 222, 222, 0.55);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 main section {
-    margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 main h2 {
-    text-align: center;
-    color: rgb(165, 42, 42);
-    margin-bottom: 20px;
+  text-align: center;
+  color: rgb(165, 42, 42);
+  margin-bottom: 20px;
 }
 
 main ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 main ul li {
-    background-color: rgba(165, 42, 42, 0.68);
-    margin-bottom: 10px;
-    padding: 15px;
+  background-color: rgba(165, 42, 42, 0.68);
+  margin-bottom: 10px;
+  padding: 15px;
 }
 
 main ul li h2 {
-    margin: 0 0 10px 0;
-    font-size: 1.5em;
-    color: #000;
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: #000;
 }
 
 main ul ul {
-    margin-top: 10px;
-    padding-left: 20px;
+  margin-top: 10px;
+  padding-left: 20px;
 }
 
 main ul ul li {
-    background: none;
-    padding: 5px 0;
+  background: none;
+  padding: 5px 0;
 }
 
 /* Table Styles */
 .table {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 .table table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .table th, .table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 .table th {
-    background-color: brown;
-    color: white;
+  background-color: brown;
+  color: white;
 }
 
 .table tr:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 /* Form Styles */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 form label {
-    margin: 10px 0 5px 0;
+  margin: 10px 0 5px 0;
 }
 
 form select, form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
 }
 
 form button {
-    background-color: brown;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
+  background-color: brown;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
 }
 
 form button:hover {
-    background-color: rgba(193, 76, 76, 0.79);
+  background-color: rgba(193, 76, 76, 0.79);
 }
 
 /* Footer Styles */
 footer {
-    color: white;
-    text-align: center;
-    background-color: brown;
-    padding: 20px 0;
-    margin-top: 40px;
+  background-color: #4A2E3C;
+  color: #F3E8E3;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 2px solid #6E465E;
+  box-sizing: border-box; /* Include padding in width */
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
-footer a {
-    color: brown;
-    text-decoration: none;
+footer .left-column, footer .right-column {
+  flex: 1;
+  margin: 10px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+footer .left-column p {
+  margin-bottom: 10px;
 }
 
-.foot {
-    display: flex;
+footer .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+footer .social-icons a {
+  color: #F3E8E3;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #C7A6B1;
+}
+
+footer .contact-info {
+  margin-bottom: 20px;
+}
+
+footer .contact-info i {
+  margin-right: 10px;
+}
+
+footer .latest-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .post {
+  background-color: #292929;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+footer .post img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+footer .post h3 {
+  margin: 10px 0;
+}
+
+footer .post p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+footer .newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer .newsletter button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffc107;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Booking Page Specific Styles */
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 26px;
+  width: 32px;
+  margin: 3px;
+  font-size: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: green;
+}
+
+
+.seat.sold {
+  background-color: #000000;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 120px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-48deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: rgb(158, 248, 158);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
+  }
 
-.foot ul {
-    list-style: none;
-    padding: 0;
-}
+  .marquee-content {
+    animation-duration: 30s;
+  }
 
-.foot-2 {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    justify-content: center;
-}
+  .row, .row1, .row2 {
+    flex-direction: column;
+  }
 
-.foot-2 i {
-    margin-right: 20px;
-}
-=======
-/* Global Styles */
-body {
-    position: relative;
-    background-image: url(./img/theater1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Header Styles */
-header {
-    background-color: brown;
-    padding: 10px;
-    text-align: center;
-    color: #000;
-    font-size: large;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-ul img {
-    position: absolute;
-    height: 45px;
-    top: 8px;
-    left: 16px;
-}
-
-.navIcons {
-    margin: 0 20px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navIcons i {
-    padding: 20px;
-    color: white;
-}
-
-.navIcons i:hover {
-    color: rgb(255, 255, 255);
-}
-
-/* Main Content Styles */
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(224, 222, 222, 0.55);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-main section {
-    margin-bottom: 30px;
-}
-
-main h2 {
-    text-align: center;
-    color: rgb(165, 42, 42);
+  .column, .column1, .column2 {
     margin-bottom: 20px;
-}
-
-main ul {
-    list-style: none;
-    padding: 0;
-}
-
-main ul li {
-    background-color: rgba(165, 42, 42, 0.68);
-    margin-bottom: 10px;
-    padding: 15px;
-}
-
-main ul li h2 {
-    margin: 0 0 10px 0;
-    font-size: 1.5em;
-    color: #000;
-}
-
-main ul ul {
+  }
+  
+  .social-icons {
     margin-top: 10px;
-    padding-left: 20px;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+  }
+  
+  .right-column {
+    text-align: right;
+  }
+  
+  .contact-info div {
+    margin-bottom: 10px;
+  }
 }
 
-main ul ul li {
-    background: none;
-    padding: 5px 0;
-}
-
-/* Table Styles */
-.table {
-    overflow-x: auto;
-}
-
-.table table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table th, .table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.table th {
-    background-color: brown;
-    color: white;
-}
-
-.table tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Form Styles */
-form {
-    display: flex;
+@media (max-width: 480px) {
+  header {
     flex-direction: column;
-    align-items: flex-start;
-}
-
-form label {
-    margin: 10px 0 5px 0;
-}
-
-form select, form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: brown;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-form button:hover {
-    background-color: rgba(193, 76, 76, 0.79);
-}
-
-/* Footer Styles */
-footer {
-    color: white;
-    text-align: center;
-    background-color: brown;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-footer a {
-    color: brown;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.foot {
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
+  }
 
-.foot ul {
-    list-style: none;
-    padding: 0;
-}
-
-.foot-2 {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
+  .icon-group {
     justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .full-width-img {
+    margin: 15px 0;
+  }
 }
 
-.foot-2 i {
-    margin-right: 20px;
+/*=============== FOOTER STYLES ===============*/
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
 }
->>>>>>> 3d02e281e468f752c30031f112be94d8158e7202
+
+.footer__container {
+  max-width: 968px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.footer__title {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 0.813rem;
+}
+
+.footer__links {
+  list-style: none;
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+  color: rgb(213, 213, 213);
+}
+
+.footer__social-link {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.footer__copy {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 360px) {
+  .footer {
+    padding: 3.5rem 0 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .footer {
+    padding: 6rem 0 2rem;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer__social {
+    align-items: flex-start;
+  }
+
+  .footer__social-link {
+    font-size: 1.45rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    column-gap: 3rem;
+  }
+}

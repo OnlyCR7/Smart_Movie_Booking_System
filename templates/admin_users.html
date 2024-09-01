@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin User Management</title>
+    <style>
+        .edit{
+    padding:2px;
+    background-color:blue;
+    color:#fff;
+    border:none;
+    text-decoration:none;
+    font-size:16px;
+    cursor:pointer;
+}
+       .delete{
+    padding:2px;
+    background-color:red;
+    color:#fff;
+    border:none;
+    text-decoration:none;
+    font-size:16px;
+    cursor:pointer;
+       }
+       .dashboard{
+    padding:2px;
+    background-color:#007BFF;
+    color:#fff;
+    border:none;
+    text-decoration:none;
+    border-radius: 3px;
+    font-size:16px;
+    cursor:pointer;
+       }
+    </style>
+</head>
+<body>
+    <h1>Manage Users</h1>
+    
+    <h2>All Users</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <a href="{{ url_for('edit_user', user_id=user.id) }}" class="edit">Edit</a>
+                    <a href="{{ url_for('delete_user', user_id=user.id) }}" class="delete">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('admin_dashboard') }}"class="dashboard">Go to Dashboard</a>
+</body>
+</html>

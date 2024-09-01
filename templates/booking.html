@@ -6,204 +6,331 @@
     <title>Booking</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/booking.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> <!-- New CSS file for movie seat booking -->
+    <style>
+        .booking-section {
+            display: block;
+            margin-top: 120px;
+        }
+        
+        .movie-container {
+            display: block;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        select {
+            display: block;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .booking-section, .movie-container, label, select {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .movie-container label, 
+        .movie-container select, 
+        .booking-content .heading, 
+        .text {
+            color: black;
+        }
+
+        .showcase small {
+            color: black;
+        }
+
+        /* Button Styles */
+        .make-payment-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .make-payment-btn:hover {
+            background-color: darkgreen;
+        }
+
+        .make-payment-btn:active {
+            background-color: lightgreen;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="navIcons">
-            <nav>
-                <ul>
-                    <li><img src="{{ url_for('static', filename='img/logo.png') }}" height="20px" alt="Logo"></li>
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('movies') }}">Movies</a></li>
-                    <li><a href="{{ url_for('food') }}">Food Court</a></li>
-                    <li><a href="{{ url_for('recommend_movie') }}">Recomend Movie</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                    <li><a href="{{ url_for('login') }}">Log in</a></li>
-                </ul>
-            </nav>
-            <div class="icon-group">
-                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                <i class="fa-regular fa-user"></i>
-                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            </div>
+        <img src="{{ url_for('static', filename='/img/codedot_logo.gif') }}" alt="Logo" class="logo">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="{{ url_for('movies') }}">Movies</a></li>
+                <li><a href="{{ url_for('booking') }}">Bookings</a></li>
+                <li><a href="{{ url_for('recommend_movie') }}">Recommend Movie</a></li>
+                <li><a href="{{ url_for('food') }}">Food Court</a></li>
+                <li><a href="{{ url_for('login') }}">Log in</a></li>
+            </ul>
+        </nav>
+        <div class="icon-group">
+            <i class="fa-sharp fa-solid fa-magnifying-glass" aria-label="Search"></i>
+            <i class="fa-regular fa-user" aria-label="User"></i>
+            <i class="fa-sharp fa-solid fa-cart-shopping" aria-label="Cart"></i>
         </div>
     </header>
     <main>
-        <section>
-            <h1 class="heading">Available Movies</h1>
-            <ul>
-                <li>
-                    <h2>Abhiyum Naanum</h2>
-                    <p>Showtimes:</p>
-                    <ul>
-                        <li>12:00 PM</li>
-                        <li>3:00 PM</li>
-                        <li>6:00 PM</li>
-                        <li>9:00 PM</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>Unnale Unnale</h2>
-                    <p>Showtimes:</p>
-                    <ul>
-                        <li>12:30 PM</li>
-                        <li>3:30 PM</li>
-                        <li>6:30 PM</li>
-                        <li>9:30 PM</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>Neethane En Ponvasandham</h2>
-                    <p>Showtimes:</p>
-                    <ul>
-                        <li>1:00 PM</li>
-                        <li>4:00 PM</li>
-                        <li>7:00 PM</li>
-                        <li>10:00 PM</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>Sachin</h2>
-                    <p>Showtimes:</p>
-                    <ul>
-                        <li>1:00 PM</li>
-                        <li>4:00 PM</li>
-                        <li>7:00 PM</li>
-                        <li>10:00 PM</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>Minnale</h2>
-                    <p>Showtimes:</p>
-                    <ul>
-                        <li>1:00 PM</li>
-                        <li>4:00 PM</li>
-                        <li>7:00 PM</li>
-                        <li>10:00 PM</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>Alaipayuthey</h2>
-                    <p>Showtimes:</p>
-                    <ul>
-                        <li>1:00 PM</li>
-                        <li>4:00 PM</li>
-                        <li>7:00 PM</li>
-                        <li>10:00 PM</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Movies</h2>
-            <div class="table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Movie Title</th>
-                            <th>Genre</th>
-                            <th>Duration</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Abhiyum Naanum</td>
-                            <td>Comedy Drama</td>
-                            <td>2 hours 10 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Unnale Unnale</td>
-                            <td>Romance Drama</td>
-                            <td>2 hours 15 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Neethane En Ponvasandham</td>
-                            <td>Romance Drama</td>
-                            <td>2 hours 10 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Sachin</td>
-                            <td>Comedy Drama</td>
-                            <td>2 hours 10 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Minnale</td>
-                            <td>Romance Drama</td>
-                            <td>2 hours 15 minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Alaipayuthey</td>
-                            <td>Romance Drama</td>
-                            <td>2 hours 10 minutes</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section class="booking-section">
+            <div class="movie-container">
+                <label>Select a movie:</label>
+                <select id="movie">
+                    <option value="200">Avatar (RS.200)</option>
+                    <option value="220">Abhiyum Naanum (RS.220)</option>
+                    <option value="320">Ant Man (RS.320)</option>
+                    <option value="250">RRR (RS.250)</option>
+                    <option value="225">Bool Boolaiya (RS.225)</option>
+                    <option value="230">JK Hor (RS.230)</option>
+                    <option value="190">Marvel (RS.190)</option>
+                    <option value="200">Mummy (RS.200)</option>
+                    <option value="250">Nails (RS.250)</option>
+                    <option value="230">Sachin (RS.230)</option>
+                    <option value="235">ESmart (RS.235)</option>
+                    <option value="200">Silent (RS.200)</option>
+                    <option value="240">Okok (RS.240)</option>
+                    <option value="150">Tanhaji (RS.150)</option>
+                    <option value="201">Ten (RS.201)</option>
+                    <option value="260">Thor (RS.260)</option>
+                    <option value="270">Spider Man (RS.270)</option>
+                    <option value="245">Master Vijay (RS.245)</option>
+                    <option value="200">Wakanda (RS.200)</option>
+                    <option value="199">War (RS.199)</option>
+                    <option value="215">Yodha (RS.215)</option>
+                </select>
+            </div>
+
+            <div class="booking-content">
+                <h1 class="heading">Available Movies</h1>
+
+                <!-- Movie Seat Booking Section -->
+                <ul class="showcase">
+                    <li>
+                        <div class="seat"></div>
+                        <small>Available</small>
+                    </li>
+                    <li>
+                        <div class="seat selected"></div>
+                        <small>Selected</small>
+                    </li>
+                    <li>
+                        <div class="seat sold"></div>
+                        <small>Soldout</small>
+                    </li>
+                </ul>
+                <div class="container">
+                    <div class="screen"></div>
+
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat sold"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat sold"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat sold"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat sold"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat sold"></div>
+                        <div class="seat sold"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat"></div>
+                        <div class="seat sold"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat sold"></div>
+                        <div class="seat"></div>
+                        <div class="seat sold"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+
+                <p class="text">
+                    You have selected <span id="count">0</span> seat(s) for a price of RS.<span id="total">0</span>
+                </p>
+
+                <!-- Make Payment Button -->
+                <button class="make-payment-btn" onclick="makePayment()">Make Payment</button>
             </div>
         </section>
-        <section>
-            <form>
-                <label for="movie">Choose a movie:</label>
-                <select id="movie">
-                    <option value="movie1">Abhiyum Naanum</option>
-                    <option value="movie2">Unnale Unnale</option>
-                    <option value="movie3">Neethane En Ponvasandham</option>
-                    <option value="movie4">Sachin</option>
-                    <option value="movie5">Minnale</option>
-                    <option value="movie6">Alaipayuthey</option>
-                </select>
-                <div class="dropdown">
-                    <label for="showtime">Choose a showtime:</label>
-                    <select id="showtime">
-                        <option value="12:00">12:00 PM</option>
-                        <option value="12:30">12:30 PM</option>
-                        <option value="1:00">1:00 PM</option>
-                        <option value="3:00">3:00 PM</option>
-                        <option value="3:30">3:30 PM</option>
-                        <option value="4:00">4:00 PM</option>
-                        <option value="6:00">6:00 PM</option>
-                        <option value="6:30">6:30 PM</option>
-                        <option value="7:00">7:00 PM</option>
-                        <option value="9:00">9:00 PM</option>
-                        <option value="9:30">9:30 PM</option>
-                        <option value="10:00">10:00 PM</option>
-                    </select>
-                </div>
-                <label for="quantity">Number of tickets:</label>
-                <input type="number" id="quantity" min="1" max="10" value="1" />
-                <button type="submit">Book Tickets</button>
-            </form>
-        </section>
     </main>
-    <footer>
-        <div class="foot">
-            <ul>
-                <li>What is Fandom?</li>
-                <li>About</li>
-                <li>Careers</li>
-                <li>Press</li>
-                <li>Contact</li>
-            </ul>
-            <ul>
-                <li>Community Central</li>
-                <li>Support</li>
-                <li>Help</li>
-                <li>Media Kit</li>
-                <li>Contact</li>
-            </ul>
-            <ul>
-                <li>Terms of Use</li>
-                <li>Privacy Policy</li>
-                <li>Digital Services Act</li>
-                <li>Global Sitemap</li>
-                <li>Local Sitemap</li>
-            </ul>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <h3 class="footer__title">Our Services</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Support</a></li>
+                    <li><a href="#" class="footer__link">Donate</a></li>
+                    <li><a href="#" class="footer__link">Report a bug</a></li>
+                    <li><a href="#" class="footer__link">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Our Company</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Blog</a></li>
+                    <li><a href="#" class="footer__link">Our mission</a></li>
+                    <li><a href="#" class="footer__link">Get in touch</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Community</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Support</a></li>
+                    <li><a href="#" class="footer__link">Questions</a></li>
+                    <li><a href="#" class="footer__link">Usage help</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <a href="#" class="footer__social-link"><i class="bx bxl-facebook-circle"></i></a>
+                <a href="#" class="footer__social-link"><i class="bx bxl-github"></i></a>
+                <a href="#" class="footer__social-link"><i class="bx bxl-instagram"></i></a>
+            </div>
         </div>
-        <div class="foot-2">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-telegram"></i>
-        </div>
+
+        <p class="footer__copy">&#169; by Code dot, All rights reserved.</p>
     </footer>
+    <script>
+        const container = document.querySelector(".container");
+        const seats = document.querySelectorAll(".row .seat:not(.sold)");
+        const count = document.getElementById("count");
+        const total = document.getElementById("total");
+        const movieSelect = document.getElementById("movie");
+
+        populateUI();
+
+        let ticketPrice = +movieSelect.value;
+
+        // Save selected movie index and price
+        function setMovieData(movieIndex, moviePrice) {
+          localStorage.setItem("selectedMovieIndex", movieIndex);
+          localStorage.setItem("selectedMoviePrice", moviePrice);
+        }
+
+        // Update total and count
+        function updateSelectedCount() {
+          const selectedSeats = document.querySelectorAll(".row .seat.selected");
+
+          const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
+
+          localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
+
+          const selectedSeatsCount = selectedSeats.length;
+
+          count.innerText = selectedSeatsCount;
+          total.innerText = selectedSeatsCount * ticketPrice;
+
+          setMovieData(movieSelect.selectedIndex, movieSelect.value);
+        }
+
+        // Get data from localstorage and populate UI
+        function populateUI() {
+          const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+
+          if (selectedSeats !== null && selectedSeats.length > 0) {
+            seats.forEach((seat, index) => {
+              if (selectedSeats.indexOf(index) > -1) {
+                seat.classList.add("selected");
+              }
+            });
+          }
+
+          const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
+
+          if (selectedMovieIndex !== null) {
+            movieSelect.selectedIndex = selectedMovieIndex;
+          }
+        }
+
+        // Movie select event
+        movieSelect.addEventListener("change", (e) => {
+          ticketPrice = +e.target.value;
+          setMovieData(e.target.selectedIndex, e.target.value);
+          updateSelectedCount();
+        });
+
+        // Seat click event
+        container.addEventListener("click", (e) => {
+          if (
+            e.target.classList.contains("seat") &&
+            !e.target.classList.contains("sold")
+          ) {
+            e.target.classList.toggle("selected");
+
+            updateSelectedCount();
+          }
+        });
+
+        // Initial count and total set
+        updateSelectedCount();
+
+        // Make Payment Button Function
+        function makePayment() {
+          const selectedSeatsCount = count.innerText;
+          const totalAmount = total.innerText;
+
+          alert(`Your number of seats: ${selectedSeatsCount}\nTotal amount: RS.${totalAmount}\nPayment done.`);
+        }
+    </script>
 </body>
 </html>
