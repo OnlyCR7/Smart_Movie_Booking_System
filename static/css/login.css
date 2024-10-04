@@ -131,7 +131,7 @@ h3 {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #007BFF;
+    background-color: #414141;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -141,7 +141,7 @@ h3 {
 
 .btn2{
     padding:10px;
-    background-color:#007BFF;
+    background-color:#414141;
     /* margin-top:10px; */
     color:#fff;
     border:none;
@@ -151,7 +151,7 @@ h3 {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #000000;
 }
 
 a {

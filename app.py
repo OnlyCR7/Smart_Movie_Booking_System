@@ -1,19 +1,40 @@
 from flask import Flask, render_template
-import pickle
 import numpy as np
 import pandas as pd
 import difflib
 from flask import Flask, render_template, request, jsonify
+import requests
+import gdown
+import pickle
+import io
 
 app = Flask(__name__)
 
-with open('vectorizer.pkl', 'rb') as f:
-    vectorizer = pickle.load(f)
+# Google Drive links for the uploaded files
+vec_url = 'https://drive.google.com/uc?id=1Vt-8TCKZ1_eew-3HfWKJZgtUcNLHNdb5'
+sim_url = 'https://drive.google.com/uc?id=1wfLNeUyFfsag0za4UJ-QHpvJ15iYNs1O'
 
-with open('similarity.pkl', 'rb') as f:
-    similarity = pickle.load(f)
+# Function to download and load a pickle file
+def load_pickle_with_gdown(url):
+    # Download the file to a temporary location
+    temp_file = gdown.download(url, quiet=True)
     
-dataset = pd.read_csv('movies.csv')  # Update with your actual path
+    # Load the pickle object from the file
+    with open(temp_file, 'rb') as f:
+        return pickle.load(f)
+
+# Load the vectorizer and similarity matrix
+vectorizer = load_pickle_with_gdown(vec_url)
+
+similarity = load_pickle_with_gdown(sim_url)
+
+
+
+# Google Drive file ID from your link
+file_id = '1TCeFRLCGtOzIA0EKVW6rODBfNQ0Zw_i0'
+url = f'https://drive.google.com/uc?id={file_id}'
+
+dataset = pd.read_csv(url)  # Update with your actual path
 all_movies = dataset['title'].tolist()
 
 def get_recommendations(favorite_movie):
