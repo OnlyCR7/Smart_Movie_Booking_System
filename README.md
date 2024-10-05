@@ -1,34 +1,28 @@
 # Smart Movie Booking System
 
-## Project Overview
+The **Smart Movie Booking System** is a web-based platform that simplifies the movie ticket booking process. It allows users to browse through available movies, view showtimes, and reserve tickets with ease.
 
-The **Smart Movie Booking System** is a user-friendly platform that allows users to book movie tickets online. It provides a seamless experience with real-time seat availability, secure payments, and personalized movie recommendations. Users can explore various movies, view showtimes, and choose their seats from an interactive seat map.
+## Features
+- **Responsive Design**: The platform is optimized for mobile, tablet, and desktop screens.
+- **Interactive Navbar**: Navigate through the application easily.
+- **Dynamic Marquee**: A rotating, right-to-left movie marquee with smooth transitions.
+- **Booking Confirmation**: A button that triggers a confirmation alert for booking.
+- **Attractive Footer**: Standardized footer for a polished look.
+- **Interactive Movie Selection**: Click on movie posters to open detailed pages.
 
-## Key Features
+## Technologies Used
+- **HTML**: Structuring the webpage and its content.
+- **CSS**: Styling the webpage, making it visually appealing and responsive.
+- **JavaScript**: Adding interactivity, such as alert confirmations for bookings and marquee functionality.
 
-- **User Authentication:** Register and log in to manage your bookings and profile.
-- **Browse Movies:** View details like trailers, synopsis, and showtimes for a variety of movies.
-- **Real-Time Seat Selection:** Choose available seats from a dynamic seat map.
-- **Secure Payments:** Multiple secure payment methods (credit/debit cards, e-wallets).
-- **Personalized Recommendations:** Get movie suggestions based on your viewing history.
-- **Notifications:** Receive alerts for upcoming movies, new releases, and promotions.
+## Getting Started
 
-## Technology Stack
+To run this project locally, follow the steps below:
 
-- **Frontend:** HTML, CSS, JavaScript (React/VanillaJS), Bootstrap.
-- **Backend:** Python (Flask).
-- **Database:** MySQL.
-- **Payment Gateway:** Fake.
-- **Authentication:** Hash Password.
+### Prerequisites
+Ensure that you have a modern web browser and a local server to host the HTML files if needed.
 
-## Installation Guide
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/OnlyCR7/Smart_Movie_Booking_System.git
-
-
-
-
-
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/OnlyCR7/Smart_Movie_Booking_System.git
